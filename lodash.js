@@ -6854,6 +6854,12 @@
      *
      * _.chunk(['a', 'b', 'c', 'd'], 3);
      * // => [['a', 'b', 'c'], ['d']]
+     *
+     * @note
+     * 1.数组的空检查，参数的边界值检查和修正
+     * 2.无需计算可提前结束
+     * 3.构造定长数组，Array(LENGTH)
+     * 4.截取数组方法，[1,2,3,4,5,6,7].slice(2, 4) // > [3,4]
      */
     function chunk(array, size, guard) {
       if ((guard ? isIterateeCall(array, size, guard) : size === undefined)) {
